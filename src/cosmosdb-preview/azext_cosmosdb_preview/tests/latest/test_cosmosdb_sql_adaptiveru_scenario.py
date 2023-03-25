@@ -56,7 +56,7 @@ class Cosmosdb_previewAdaptiveRUScenarioTest(ScenarioTest):
         # make throughput equal for all partitions
         all_equal_throughput = self.cmd('az cosmosdb sql container redistribute-partition-throughput --resource-group {rg} --account-name {acc} --database-name {db_name} --name {col} --evenly-distribute ').get_output_in_json()
         print(all_equal_throughput)
-     
+        
 
     @ResourceGroupPreparer(name_prefix='cli_test_cosmosdb_mongodb_adaptiveru', location='australiaeast')
     def test_cosmosdb_mongodb_collection_adaptiveru(self, resource_group):

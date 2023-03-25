@@ -495,6 +495,7 @@ def _gen_guid():
     import uuid
     return uuid.uuid4()
 
+
 # create cosmosdb account with gremlin databases and tables to restore
 # pylint: disable=too-many-locals
 def cli_cosmosdb_create(cmd,
